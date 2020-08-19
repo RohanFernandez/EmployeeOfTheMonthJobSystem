@@ -14,6 +14,6 @@ A job pool is a fixed size circular buffer that stores all the submitted jobs. T
 It works as a fixed size queue and with the help of mutex's it is built to be thread safe.
 Being thread-safe only a single thread can take the next job and a job can be put onto the buffer by preserving the head and tail position of the buffer.
 
-## ** Wait and Join**
+## **Wait and Join**
 As all threads are always running in parallel, there is no way to join the threads and the threads are only stopped on destroying the Job System.
 Instead, the Wait function can be used to wait for execution for jobs on all threads to be completed until the main thread proceeds.
